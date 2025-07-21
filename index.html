@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+    <section class="flex py-3 px-5 items-center justify-between shadow-lg sticky top-0 z-22 bg-white">
+        <div class="flex gap-7 items-center">
+            <div class="lg:hidden" >
+                <label class="burger " for="burger">
+                    <input type="checkbox" id="burger" onclick="toggleMobileSidebar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <img src="src/assets/logo1.png" alt="" class="h-8">
+        </div>
+
+        <div class="hidden lg:block">
+            <div class="InputContainer block">
+                <i class="fas fa-search search-icon"></i>
+                <input placeholder="Find Courses, subject and universities..." id="input" class="input" name="text" type="text">
+            </div>
+        </div>
+        
+        <div class="flex gap-4 items-center px-2 lg:px-8">
+            <!-- nav dropdowns -->
+            <div class="relative group hidden lg:inline-block">
+                <a href="#" class="flex items-center gap-1 text-black text-[15px]  font-semibold px-4 py-2 rounded hover:bg-gray-200">
+                    Courses 
+                    <span class="relative w-4 h-3   ml-3">
+                        <i class="fas fa-chevron-down text-xs absolute top-0 left-0 w-full h-full group-hover:opacity-0 transition duration-200 ease-in-out"></i>
+                        <i class="fas fa-chevron-up text-xs absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-200 ease-in-out"></i>
+                    </span>
+                </a>
+                
+                <div class="absolute left-0 mt-2 w-94 bg-white border border-gray-400 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-300 z-50">
+                    <h3 class="block px-4 py-3  text-sm">Courses </h3>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-700">
+                       <span> MSc Advanced Computer Science with Business</span>
+                       <span>University of Exeter</span>
+                    </a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-700">
+                       <span> MSc Advanced Computer Science with Business</span>
+                       <span>University of Exeter</span>
+                    </a>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-700">
+                       <span> MSc Advanced Computer Science with Business</span>
+                       <span>University of Exeter</span>
+                    </a>
+                </div>
+            </div>
+            <div class="relative group hidden lg:inline-block">
+                <a href="#" class="flex items-center gap-1 text-black text-[15px] font-semibold px-4 py-2 rounded hover:bg-gray-200">
+                    Countries 
+                    <span class="relative w-4 h-3   ml-3">
+                        <i class="fas fa-chevron-down text-xs absolute top-0 left-0 w-full h-full group-hover:opacity-0 transition duration-200 ease-in-out"></i>
+                        <i class="fas fa-chevron-up text-xs absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-200 ease-in-out"></i>
+                    </span>
+                </a>
+                
+                <div class="absolute left-0 mt-2 w-74 bg-white border border-gray-400 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-300 z-50">
+                    <h3 class="block px-4 py-3  text-sm">TOP INSTITUTION IN </h3>
+                    <a href="#" class="block px-4 py-4 hover:bg-gray-100 text-sm text-gray-700">United Kingdom</a>
+                    <a href="#" class="block px-4 py-4 hover:bg-gray-100 text-sm text-gray-700">Ireland</a>
+                    <a href="#" class="block px-4 py-4 hover:bg-gray-100 text-sm text-gray-700">United-state</a>
+                    <a href="#" class="block px-4 py-4 hover:bg-gray-100 text-sm text-gray-700">Canada</a>
+                    <a href="#" class="block px-4 py-4 hover:bg-gray-100 text-sm text-gray-700">New-Zealand</a>
+                    <a href="#" class="block px-4 py-4 hover:bg-gray-100 text-sm text-gray-700">Australia</a>
+                </div>
+            </div>
+            <div class="relative group hidden lg:inline-block">
+                <a href="#" class="flex items-center gap-1 text-black text-[15px]  font-semibold px-4 py-2 rounded hover:bg-gray-200">
+                    About 
+                    <span class="relative w-4 h-3   ml-3">
+                        <i class="fas fa-chevron-down text-xs absolute top-0 left-0 w-full h-full group-hover:opacity-0 transition duration-200 ease-in-out"></i>
+                        <i class="fas fa-chevron-up text-xs absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-200 ease-in-out"></i>
+                    </span>
+                </a>
+                
+                <div class="absolute left-0 mt-2 w-48    bg-white border border-gray-400 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition duration-300 z-50">
+                    <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm text-gray-700">Companies</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm text-gray-700">Careers</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm text-gray-700">For Partners</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm text-gray-700">Genie</a>
+                    <a href="#" class="block px-4 py-3 hover:bg-gray-100 text-sm text-gray-700">Mobile app</a>
+                </div>
+            </div>
+            <!-- notification and profile -->
+            <div class="flex gap-6 items-center"> 
+                <i class="fa-regular py-3 px-3 lg:p-0 bg-gray-200 lg:bg-white rounded-[50%] fa-bell text-2xl"></i>
+                <div class="lg:hidden">
+                <i class="fa-solid py-3 px-3 lg:p-0 bg-gray-200 lg:bg-white rounded-[50%] fa-magnifying-glass text-2xl "></i>
+                </div>
+                <span class="rounded-[50%] bg-gray-700 text-lg py-[9px] px-[14px] font-bold text-white hidden lg:block">A</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- body -->
+    <section class="py-6 px-3 flex items-start">
+        <div
+            id="mobileSidebar"
+            class="fixed top-0 left-0 w-64 h-full bg-gray-800 text-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden"
+        >
+            <div class="p-4">
+            <h2 class="text-xl font-bold mb-4">Menu</h2>
+            <ul>
+                <li class="mb-2">Home</li>
+                <li class="mb-2">About</li>
+                <li class="mb-2">Contact</li>
+            </ul>
+            </div>
+        </div>
+
+        <!-- left sidebar -->
+        <div  id="sidebar" class="sidebar lg:w-[32vw] sticky top-20 hidden lg:block">
+            <!-- user card -->
+            <div class="w-[95%] border-[1px] my-2 border-gray-100 shadow-lg p-4 rounded-2xl">
+                <header class="flex justify-between items-center">
+                    <div class="flex gap-3">
+                        <span class="rounded-[50%] bg-gray-700 text-lg py-[9px] px-[14px] font-bold text-white">A</span>
+                        <div>
+                            <h5 class="font-semibold ">Adebola Toluwani</h5>
+                            <p class="text-sm text-gray-600">Abeokuta, Nigeria</p>
+                        </div>
+                    </div>
+                    <i id="arrow-icon" onclick="toggleContent()" class="fas fa-chevron-up text-sm cursor-pointer transition-transform duration-300"></i>
+                </header>
+                <div id="toggle-content" class="mt-2 p-4 flex flex-col items-center ">
+                    <p class="text-gray-700 text-sm">Looking for a <b>Undergraduate</b>  Course in <b> United Kingdom </b></p>
+                    <a href="#" class="text-white py-1.5 px-12 rounded-2xl mx-auto font-semibold bg-[#0158a5] mt-2 ">Edit</a>
+                </div>
+            </div>
+            <p class="font-bold text-sm mt-4 text-gray-700 mx-2">YOUR COUNSELLOR</p>
+            <!-- counsellor card -->
+            <div class="w-[95%] border-[1px] mt-2 border-gray-100 shadow-lg p-4 rounded-2xl">
+                <header class="flex justify-between items-center">
+                    <div class="flex gap-3">
+                        <span class="rounded-[50%] bg-gray-700 text-lg py-[9px] px-[14px] font-bold text-white">D</span>
+                        <div>
+                            <h5 class="font-semibold ">Damilola Babatola</h5>
+                            <p class="text-sm text-gray-600">Counsellor</p>
+                        </div>
+                    </div>
+                </header>
+                <div class="mt-4 flex items-center px-4">
+                    <a href=""><i class="fa-regular fa-comments text-xl"></i></a>
+                    <a href="#" class="text-white py-1.5 w-[80%] text-center rounded-2xl mx-auto  bg-[#0158a5]">Book a Session</a>
+                </div>
+            </div>
+            <!-- links card -->
+            <div class="w-[95%] border-[1px] mt-4 border-gray-200 shadow-lg p-4 rounded-2xl">
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="">
+                        <i class="fa-solid fa-house inline mr-3 text-xl"></i>Home
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm"></i>
+                </a>
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="text-gray-500">
+                        <i class="fa-regular fa-user inline mr-3 text-xl"></i>Profile
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                </a>
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="text-gray-500">
+                        <i class="fa-regular fa-folder inline mr-3 text-xl"></i>Documents
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                </a>
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="text-gray-500">
+                        <i class="fa-regular fa-heart inline mr-3 text-xl"></i>Shortlist
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                </a>
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="text-gray-500">
+                        <i class="fa-regular fa-file inline mr-3 text-xl"></i>Applications
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                </a>
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="text-gray-500">
+                        <i class="fa-regular fa-calendar-days inline mr-3 text-xl"></i>Meet
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                </a>
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="text-gray-500">
+                        <i class="fa-solid fa-gift inline mr-3 text-xl"></i>Refer & Earn
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                </a>
+                <a class="flex items-center py-4 justify-between cursor-pointer">
+                    <div href="" class="text-gray-500">
+                        <i class="fa-solid fa-gear inline mr-3 text-xl"></i>Settings
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                </a>
+                <div class="w-[100%] flex flex-col gap-4 justify-center items-center">
+                    <a href="" class="border-1 border-red-400 py-2 px-30 mx-auto rounded-2xl mt-2 text-red-500 font-semibold ">Logout</a>
+                    <div class="flex text-[12px] gap-2">
+                        <a href="" class="text-gray-600">Privacy</a>
+                        <span class="text-gray-600">•</span>
+                        <a href="" class="text-gray-600">FAQ</a>
+                        <span class="text-gray-600">•</span>
+                        <a href="" class="text-gray-600">Articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- right body -->
+        <div class="overflow-auto lg:w-[67vw] px-4 lg:px-6">
+            <h2 class="font-extrabold text-2xl text-[#0158a5]">We've personalised your space, Adebiyi</h2>
+
+            <!-- top card genie -->
+            <div class="border-1 rounded-xl shadow-lg border-gray-300  lg:w-[98%] py-4 px-4 mt-4">
+                <span class="text-xl font-extralight text-[#0158a5]">genie</span>
+                <p class="text-[15px] my-3">
+                    Course search made smarter and simpler. Use our magical AI system, to find courses with high admission chances.
+                </p>
+                <a href="" class="bg-gray-700 text-white text-[12px] py-1.5 px-3 rounded-2xl ">Try now</a>
+            </div>
+
+            <div class="flex justify-between w-[95%] px-4 mt-6">
+                <div>
+                    <i class="fa-solid fa-graduation-cap text-xl"></i> Courses
+                </div>
+                <a href="" class="text-[#0158a5]">Show all <i class="fa-solid fa-arrow-right inline"></i></a>
+            </div>
+
+            <!-- courses card -->
+            <div class="flex overflow-x-auto cc gap-4 mt-4">
+                <!-- card -->
+                <div class="shadow-lg border-1 border-gray-200 rounded-xl p-4 flex lg:w-[48%] flex-col gap-8">
+                    <h4>Msc International Accounting and Finance</h4>
+
+                    <div class="flex justify-between items-center w-[85vw] lg:w-auto">
+                        <p class="text-gray-400 text-sm mt-2">
+                            <i class="fa-solid fa-caret-down inline text-[#0158a5] text-lg"></i>
+                            Aston University, UK
+                        </p>
+                        <div class="flex flex-col flex-end">
+                            <span class="text-xs text-[#0158a5] font-bold bg-blue-100 rounded-xl py-1 px-1.5 ">EXPRESS OFFER</span>
+                            <p class="text-sm text-[#0158a5] ml-12 mt-1">$31,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-lg border-1 border-gray-200 rounded-xl p-4 flex  lg:w-[48%] flex-col gap-8">
+                    <h4>MA TESOL</h4>
+
+                    <div class="flex justify-between items-center w-[85vw] lg:w-auto">
+                        <p class="text-gray-400 text-sm mt-2">
+                            <i class="fa-solid fa-caret-down inline text-[#0158a5] text-lg"></i>
+                            Aston University, UK
+                        </p>
+                        <div class="flex flex-col flex-end">
+                            <span class="text-xs text-[#0158a5] font-bold bg-blue-100 rounded-xl py-1 px-1.5 ">EXPRESS OFFER</span>
+                            <p class="text-sm text-[#0158a5] ml-12 mt-1">$31,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+
+            <!-- carousel -->
+                <div class="lg:px-4 px-2 mt-4">
+                   <h4 class="text-xl tracking-wide font-semibold">Explore popular study destinations</h4>
+                    <p class="font-light">Find a country to learn and excel in all aspects of life</p>
+                </div>
+
+            <div class="container flex items-center justify-center lg:px-4 mt-4">
+                <div class="wrapper">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <ul class="carousel">
+                        <li class="card relative">
+                            <img src="src/assets/image.png" alt="" class="h-78 w-182 rounded-2xl" draggable="false">
+                            <h3 class="absolute text-white bottom-2 left-6 font-semibold text-xl">United Kingdom</h3>
+                        </li>
+                        <li class="card relative">
+                            <img src="src/assets/image.png" alt="" class="h-78 w-182 rounded-2xl" draggable="false">
+                            <h3 class="absolute text-white bottom-2 left-6 font-semibold text-xl">London</h3>
+                        </li>
+                        <li class="card relative">
+                            <img src="src/assets/image.png" alt="" class="h-78 w-182 rounded-2xl" draggable="false">
+                            <h3 class="absolute text-white bottom-2 left-6 font-semibold text-xl">Canada</h3>
+                        </li>
+                        <li class="card relative">
+                            <img src="src/assets/image.png" alt="" class="h-78 w-182 rounded-2xl" draggable="false">
+                            <h3 class="absolute text-white bottom-2 left-6 font-semibold text-xl">Tokyo</h3>
+                        </li>
+                        <li class="card relative">
+                            <img src="src/assets/image.png" alt="" class="h-78 w-182 rounded-2xl" draggable="false">
+                            <h3 class="absolute text-white bottom-2 left-6 font-semibold text-xl">South africa</h3>
+                        </li>
+                    </ul>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
+                </div>
+            </div>
+
+            <!-- article -->
+            <div class="flex flex-col w-[95%] lg:px-4 mt-6 ">
+                <div class="flex justify-between ">
+                   <h4 class="text-xl tracking-wide font-semibold"> Latest Articles </h4>
+                   <a href="" class="text-[#0158a5] ">Show all <span></span><i class="fa-solid fa-arrow-right inline"></i></a>
+                </div>
+                <p class="font-light">Read the latest articles from the world of education</p>
+            </div>
+            
+            <div class="flex gap-3 flex-wrap lg:px-4 mt-4">
+                <a href="" class="mt-2">
+                    <div class="relative">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
+                        <h4 class="lg:w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                        <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
+                    </div>
+                </a>
+                <a href="" class="mt-2">
+                    <div class="relative">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
+                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                        <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
+                    </div>
+                </a>
+                <a href="" class="mt-2">
+                    <div class="relative">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
+                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                        <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
+                    </div>
+                </a>
+                <a href="" class="mt-2">
+                    <div class="relative">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
+                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                        <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
+                    </div>
+                </a>
+                <a href="" class="mt-2">
+                    <div class="relative">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
+                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                        <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
+                    </div>
+                </a>
+                <a href="" class="mt-2">
+                    <div class="relative">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
+                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                        <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
+                    </div>
+                </a>
+                <a href="" class="mt-2">
+                    <div class="relative">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
+                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                        <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+     <footer class="bg-gray-100 px-8 pt-10 pb-6">
+        <div class="flex flex-col lg:flex-row justify-between border-b-1 border-gray-400 pb-6">
+            <div class="flex flex-col gap-4">
+                <img src="src/assets/logo1.png" alt="" class="h-8 my-4 w-32 lg:w-auto" >
+
+                <a href="#" class="hidden lg:inline-flex items-center bg-[#344150] text-white px-2.5 py-1.5 rounded-md hover:bg-gray-600 transition">
+                <i class="fab fa-apple text-2xl mr-2"></i>
+                <div class="flex flex-col leading-tight">
+                    <span class="text-[10px]">Download on the</span>
+                    <span class="text-sm font-semibold -mt-0.5">App Store</span>
+                </div>
+                </a>
+
+                <a href="#" class="hidden lg:inline-flex items-center bg-[#344150] text-white px-3 py-1.5 rounded-md hover:bg-gray-600 transition">
+                <i class="fab fa-google-play text-base mr-2"></i>
+                <div class="flex flex-col leading-tight">
+                    <span class="text-[10px]">Get it on</span>
+                    <span class="text-sm font-semibold -mt-0.5">Google Play</span>
+                </div>
+                </a>
+            </div>
+            <div class="mt-3">
+                <h2 class="font-semibold text-[15px] ">EXPLORE</h2>
+                <ul class="hidden lg:block">
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Courses</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Institution</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Study Destination</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Download App</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Refer & Earn</a></li>
+                </ul>
+            </div>
+            <div class="mt-3">
+                <h2 class="font-semibold text-[15px]">ABOUT</h2>
+                <ul class="hidden lg:block">
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">About Skolaz</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">For Partners</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Careers</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Contact Us</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Companies Policies</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Term of Service</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="mt-3">
+                <h2 class="font-semibold text-[15px]">RESOURCES</h2>
+                <ul class="hidden lg:block">
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Article</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Exams</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">FAQs</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Events</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">News</a></li>
+                </ul>
+            </div>
+            <div class="mt-3">
+                <h2 class="font-semibold text-[15px]">POPULAR COURSES</h2>
+                <ul class="hidden lg:block">
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Law Courses</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Computer Sciene Courses</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Cyber Security Courses</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Naval Architecture Courses</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Artificial Intelligence Courses</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">MBA Courses in UK</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">HR Courses in Canada</a></li>
+                    <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Business Analytics Courses in USA</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-4">
+            <div class="flex flex-col-reverse gap-4 lg:flex-row  justify-between items-center text-gray-600 text-sm">
+                <p class="mb-2 md:mb-0">© 2024 - 2025 SKOLAZ Educational Services Ltd. All rights reserved.</p>
+                <div class="flex lg:hidden mt-4 gap-2">
+                    <a href="#" class="inline-flex items-center bg-[#344150] text-white px-2.5 py-1.5 rounded-md hover:bg-gray-600 transition">
+                        <i class="fab fa-apple text-2xl mr-2"></i>
+                        <div class="flex flex-col leading-tight">
+                            <span class="text-[10px]">Download on the</span>
+                            <span class="text-sm font-semibold -mt-0.5">App Store</span>
+                        </div>
+                    </a>
+
+                    <a href="#" class="inline-flex items-center bg-[#344150] text-white px-3 py-1.5 rounded-md hover:bg-gray-600 transition">
+                        <i class="fab fa-google-play text-base mr-2"></i>
+                        <div class="flex flex-col leading-tight">
+                            <span class="text-[10px]">Get it on</span>
+                            <span class="text-sm font-semibold -mt-0.5">Google Play</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-gray-800"><i class="fa-brands fa-facebook-f text-2xl"></i></a>
+                    <a href="#" class="hover:text-gray-800"><i class="fa-brands fa-x-twitter text-2xl"></i></a>
+                    <a href="#" class="hover:text-gray-800"><i class="fa-brands fa-linkedin-in text-2xl"></i></a>
+                    <a href="#" class="hover:text-gray-800"><i class="fa-brands fa-instagram text-2xl"></i></a>
+                </div>
+            </div>
+            <div class="text-gray-700 text-sm mt-5 w-[93%]">
+                <a href="">
+                    Study Abroad Consultant in Chennai   |
+                </a>
+                <a href="">
+                    Study Abroad Consultant in Vijayawada
+                    |
+                </a>
+                <a href="">
+                    Study Abroad Consultant in New Delhi
+                    |
+                </a>
+                <a href="">
+                    Study Abroad Consultant in Hyderabad
+                    |
+                </a>
+                <a href="">
+                    Study Abroad Consultant in Riyadh
+                    |
+                </a>
+                <a href="">
+                    Study Abroad Consultant in Cairo
+                </a>
+            </div>
+        </div>
+     </footer>
+
+     
+    <script src="src/app.js"></script>
+</body>
+</html> 
