@@ -109,15 +109,57 @@
     <section class="py-6 px-3 flex items-start">
         <div
             id="mobileSidebar"
-            class="fixed top-0 left-0 w-64 h-full bg-gray-800 text-white z-50 transform -translate-x-full transition-transform duration-300 lg:hidden"
+            class="fixed top-0 left-0 w-screen flex h-full  z-50 transform -translate-x-full transition-transform duration-300 lg:hidden"
         >
-            <div class="p-4">
-            <h2 class="text-xl font-bold mb-4">Menu</h2>
+            <!-- <div class="p-4">
+            <div class=" justify-between">
+                <h2 class="text-xl font-bold mb-4 inline">Menu</h2>
+                
+            </div>
             <ul>
                 <li class="mb-2">Home</li>
                 <li class="mb-2">About</li>
                 <li class="mb-2">Contact</li>
             </ul>
+            </div> -->
+            <div class="bg-gray-100 w-[80%] rounded-r-3xl px-2">
+                <div class="w-[98%] border-[1px] bg-white my-2 border-gray-100 shadow-lg p-4 rounded-2xl">
+                    <header class="flex justify-between items-center">
+                        <div class="flex gap-3">
+                            <span class="rounded-[50%] bg-gray-700 text-lg py-[9px] px-[14px] font-bold text-white">A</span>
+                            <div>
+                                <h5 class="font-semibold ">Adebola Toluwani</h5>
+                                <p class="text-sm text-gray-600">Abeokuta, Nigeria</p>
+                            </div>
+                        </div>
+                        <i id="arrow-icon" onclick="toggleContent()" class="fas fa-chevron-up text-sm cursor-pointer transition-transform duration-300"></i>
+                    </header>
+                    <div id="toggle-content" class="mt-2 p-4 flex flex-col items-center ">
+                        <p class="text-gray-700 text-sm">Looking for a <b>Undergraduate</b>  Course in <b> United Kingdom </b></p>
+                        <a href="#" class="text-white py-1.5 px-12 rounded-2xl mx-auto font-semibold bg-[#0158a5] mt-2 ">Edit</a>
+                    </div>
+                </div>
+
+                <p class="font-bold text-sm mt-4 text-gray-700 mx-2">YOUR COUNSELLOR</p>
+                <!-- counsellor card -->
+                <div class="w-[98%] bg-white border-[1px] mt-2 border-gray-100 shadow-lg p-4 rounded-2xl">
+                    <header class="flex justify-between items-center">
+                        <div class="flex gap-3">
+                            <span class="rounded-[50%] bg-gray-700 text-lg py-[9px] px-[14px] font-bold text-white">D</span>
+                            <div>
+                                <h5 class="font-semibold ">Damilola Babatola</h5>
+                                <p class="text-sm text-gray-600">Counsellor</p>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="mt-4 flex items-center px-4">
+                        <a href=""><i class="fa-regular fa-comments text-xl"></i></a>
+                        <a href="#" class="text-white py-1.5 w-[80%] text-center rounded-2xl mx-auto  bg-[#0158a5]">Book a Session</a>
+                    </div>
+            </div>
+            </div>
+            <div class="px-2 w-[15%] bg-gray/10 backdrop-blur-xs">
+                <i class="fa-solid fa-xmark inline text-xl bg-gray-200 text-black rounded-[50%] p-2 float-right" onclick="closeSideBar()"></i>
             </div>
         </div>
 

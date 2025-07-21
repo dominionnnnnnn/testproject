@@ -1,7 +1,12 @@
 
 const toggleMobileSidebar = () => {
     const sidebar = document.getElementById('mobileSidebar');
-    sidebar.classList.toggle('-translate-x-full');
+    sidebar.classList.remove('-translate-x-full');
+  }
+
+const closeSideBar = () => {
+    const sidebar = document.getElementById('mobileSidebar');
+    sidebar.classList.add('-translate-x-full');
   }
 
 
