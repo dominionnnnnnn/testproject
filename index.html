@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     <!-- navbar -->
     <section class="flex py-3 px-5 items-center justify-between shadow-lg sticky top-0 z-22 bg-white">
         <div class="flex gap-7 items-center">
@@ -96,7 +97,7 @@
             </div>
             <!-- notification and profile -->
             <div class="flex gap-6 items-center"> 
-                <i class="fa-regular py-3 px-3 lg:p-0 bg-gray-200 lg:bg-white rounded-[50%] fa-bell text-2xl"></i>
+                <i class="fa-regular py-3 px-3 lg:p-0 bg-gray-200 lg:bg-white rounded-[50%] fa-bell text-2xl cursor-pointer" onclick="openNotification()"></i>
                 <div class="lg:hidden">
                 <i class="fa-solid py-3 px-3 lg:p-0 bg-gray-200 lg:bg-white rounded-[50%] fa-magnifying-glass text-2xl "></i>
                 </div>
@@ -105,6 +106,14 @@
         </div>
     </section>
 
+    <!-- notification -->
+     <div id="notification" class="fixed top-0 right-0 h-full w-screen lg:w-[40vw] bg-white  z-50 transform hidden  transition-transform duration-300 ">
+        <header class="border-b-1 flex justify-between px-4 py-4">
+            <h1>Notifications</h1>
+            <i class="fa-solid fa-xmark inline text-xl text-gray-500 cursor-pointer" onclick="closeNotification()"></i>
+        </header>
+
+     </div>
     <!-- body -->
     <section class="py-6 px-3 flex items-start">
         <div
@@ -122,7 +131,7 @@
                 <li class="mb-2">Contact</li>
             </ul>
             </div> -->
-            <div class="bg-gray-100 w-[80%] rounded-r-3xl px-2">
+            <div class="bg-gray-100 w-[80%] overflow-y-auto rounded-r-3xl px-2">
                 <div class="w-[98%] border-[1px] bg-white my-2 border-gray-100 shadow-lg p-4 rounded-2xl">
                     <header class="flex justify-between items-center">
                         <div class="flex gap-3">
@@ -156,7 +165,68 @@
                         <a href=""><i class="fa-regular fa-comments text-xl"></i></a>
                         <a href="#" class="text-white py-1.5 w-[80%] text-center rounded-2xl mx-auto  bg-[#0158a5]">Book a Session</a>
                     </div>
-            </div>
+                </div>
+                <p class="font-bold text-sm mt-4 text-gray-700 mx-2">ACCOUNT</p>
+                <div class="w-[98%] border-[1px] mt-4 border-gray-200 shadow-lg p-4 rounded-2xl">
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="">
+                            <i class="fa-solid fa-house inline mr-3 text-xl"></i>Home
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm"></i>
+                    </a>
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="text-gray-500">
+                            <i class="fa-regular fa-user inline mr-3 text-xl"></i>Profile
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                    </a>
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="text-gray-500">
+                            <i class="fa-regular fa-folder inline mr-3 text-xl"></i>Documents
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                    </a>
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="text-gray-500">
+                            <i class="fa-regular fa-heart inline mr-3 text-xl"></i>Shortlist
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                    </a>
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="text-gray-500">
+                            <i class="fa-regular fa-file inline mr-3 text-xl"></i>Applications
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                    </a>
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="text-gray-500">
+                            <i class="fa-regular fa-calendar-days inline mr-3 text-xl"></i>Meet
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                    </a>
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="text-gray-500">
+                            <i class="fa-solid fa-gift inline mr-3 text-xl"></i>Refer & Earn
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                    </a>
+                    <a class="flex items-center py-4 justify-between cursor-pointer">
+                        <div href="" class="text-gray-500">
+                            <i class="fa-solid fa-gear inline mr-3 text-xl"></i>Settings
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-sm text-gray-500"></i>
+                    </a>
+                    <div class="w-[100%] flex flex-col gap-4 justify-center items-center">
+                        <a href="" class="border-1 border-red-400 py-2 px-20 mx-auto rounded-2xl mt-2 text-red-500 font-semibold ">Logout</a>
+                        <div class="flex text-[12px] gap-2">
+                            <a href="" class="text-gray-600">Privacy</a>
+                            <span class="text-gray-600">•</span>
+                            <a href="" class="text-gray-600">FAQ</a>
+                            <span class="text-gray-600">•</span>
+                            <a href="" class="text-gray-600">Articles</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="px-2 py-4 w-[15%] bg-gray/10 backdrop-blur-xs">
                 <i class="fa-solid fa-xmark inline text-xl bg-gray-200 text-black rounded-[50%] p-2 float-right" onclick="closeSideBar()"></i>
@@ -361,51 +431,51 @@
             
             <div class="flex gap-3 flex-wrap lg:px-4 mt-4">
                 <a href="" class="mt-2">
-                    <div class="relative">
-                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
-                        <h4 class="lg:w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                    <div class="relative px-1">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[95vw]">
+                        <h4 class="lg:w-54 text-[13px] lg:text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
                         <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
                     </div>
                 </a>
                 <a href="" class="mt-2">
-                    <div class="relative">
-                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
-                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                    <div class="relative px-1">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[95vw]">
+                        <h4 class="lg:w-54 text-[13px] lg:text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
                         <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
                     </div>
                 </a>
                 <a href="" class="mt-2">
-                    <div class="relative">
-                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
-                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                    <div class="relative px-1">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[95vw]">
+                        <h4 class="lg:w-54 text-[13px] lg:text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
                         <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
                     </div>
                 </a>
                 <a href="" class="mt-2">
-                    <div class="relative">
-                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
-                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                    <div class="relative px-1">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[95vw]">
+                        <h4 class="lg:w-54 text-[13px] lg:text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
                         <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
                     </div>
                 </a>
                 <a href="" class="mt-2">
-                    <div class="relative">
-                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
-                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                    <div class="relative px-1">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[95vw]">
+                        <h4 class="lg:w-54 text-[13px] lg:text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
                         <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
                     </div>
                 </a>
                 <a href="" class="mt-2">
-                    <div class="relative">
-                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
-                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                    <div class="relative px-1">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[95vw]">
+                        <h4 class="lg:w-54 text-[13px] lg:text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
                         <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
                     </div>
                 </a>
                 <a href="" class="mt-2">
-                    <div class="relative">
-                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[98vw]">
-                        <h4 class="w-54 text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
+                    <div class="relative px-1">
+                        <img src="src/assets/image.png" alt="" class="h-48 lg:h-40 lg:w-auto rounded-xl w-[95vw]">
+                        <h4 class="lg:w-54 text-[13px] lg:text-[15px] font-[500] ">Best MBA universities in the UK for International students</h4>
                         <i class="fa-solid fa-bookmark absolute top-2 right-3 text-2xl text-white"></i>
                     </div>
                 </a>
@@ -437,8 +507,13 @@
                 </a>
             </div>
             <div class="mt-3">
+                <div class="flex justify-between">
                 <h2 class="font-semibold text-[15px] ">EXPLORE</h2>
-                <ul class="hidden lg:block">
+                    <div class="lg:hidden">
+                        <i id="explore-drp" class="fas fa-chevron-down text-xl" onclick="openExplore()"></i>
+                    </div>
+                </div>
+                <ul id="explore-content" class="hidden lg:block">
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Courses</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Institution</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Study Destination</a></li>
@@ -447,8 +522,13 @@
                 </ul>
             </div>
             <div class="mt-3">
-                <h2 class="font-semibold text-[15px]">ABOUT</h2>
-                <ul class="hidden lg:block">
+                <div class="flex justify-between">
+                <h2 class="font-semibold text-[15px] ">ABOUT</h2>
+                    <div class="lg:hidden">
+                        <i id="about-drp" class="fas fa-chevron-down text-xl" onclick="openAbout()"></i>
+                    </div>
+                </div>
+                <ul id="about-content" class="hidden lg:block">
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">About Skolaz</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">For Partners</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Careers</a></li>
@@ -459,8 +539,13 @@
                 </ul>
             </div>
             <div class="mt-3">
-                <h2 class="font-semibold text-[15px]">RESOURCES</h2>
-                <ul class="hidden lg:block">
+                <div class="flex justify-between">
+                <h2 class="font-semibold text-[15px] ">RESOURCES</h2>
+                    <div class="lg:hidden">
+                        <i id="resources-drp" class="fas fa-chevron-down text-xl" onclick="openResources()"></i>
+                    </div>
+                </div>
+                <ul id="resources-content" class="hidden lg:block">
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Article</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Exams</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">FAQs</a></li>
@@ -469,8 +554,13 @@
                 </ul>
             </div>
             <div class="mt-3">
-                <h2 class="font-semibold text-[15px]">POPULAR COURSES</h2>
-                <ul class="hidden lg:block">
+                <div class="flex justify-between">
+                <h2 class="font-semibold text-[15px] ">POPULAR COURSES</h2>
+                    <div class="lg:hidden">
+                        <i id="pc-drp" class="fas fa-chevron-down text-xl" onclick="openPc()"></i>
+                    </div>
+                </div>
+                <ul id="pc-content" class="hidden lg:block">
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Law Courses</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Computer Sciene Courses</a></li>
                     <li class="mt-2"><a href="#" class="text-[15px] text-gray-700">Cyber Security Courses</a></li>
